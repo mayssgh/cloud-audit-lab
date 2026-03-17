@@ -1,0 +1,58 @@
+[
+    {
+        "resource": "S3 Bucket: company-backups",
+        "issue": "Versioning is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Deleted or overwritten files cannot be recovered",
+        "remediation": "Enable bucket versioning for data recovery"
+    },
+    {
+        "resource": "S3 Bucket: company-logs",
+        "issue": "Versioning is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Deleted or overwritten files cannot be recovered",
+        "remediation": "Enable bucket versioning for data recovery"
+    },
+    {
+        "resource": "S3 Bucket: company-public-data",
+        "issue": "Bucket is publicly accessible",
+        "severity": "CRITICAL",
+        "detail": "Exposed files: config.json, employees.csv",
+        "remediation": "Enable S3 Block Public Access settings"
+    },
+    {
+        "resource": "S3 Bucket: company-public-data",
+        "issue": "Versioning is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Deleted or overwritten files cannot be recovered",
+        "remediation": "Enable bucket versioning for data recovery"
+    },
+    {
+        "resource": "IAM User: analyst-user",
+        "issue": "MFA is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Account can be accessed with password alone",
+        "remediation": "Enforce MFA for all IAM users"
+    },
+    {
+        "resource": "IAM User: dev-user",
+        "issue": "User has full admin privileges (Action: *)",
+        "severity": "CRITICAL",
+        "detail": "Policy 'DangerousAdminPolicy' grants unrestricted access to all AWS services",
+        "remediation": "Apply least privilege \u2014 grant only required permissions"
+    },
+    {
+        "resource": "IAM User: dev-user",
+        "issue": "MFA is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Account can be accessed with password alone",
+        "remediation": "Enforce MFA for all IAM users"
+    },
+    {
+        "resource": "IAM User: service-account",
+        "issue": "MFA is not enabled",
+        "severity": "MEDIUM",
+        "detail": "Account can be accessed with password alone",
+        "remediation": "Enforce MFA for all IAM users"
+    }
+]
